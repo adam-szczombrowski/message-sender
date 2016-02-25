@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'messages/display'
   root 'messages#display'
-  post 'messages/display' => 'messages#_send_to_queue'
+  post 'messages/display' => 'messages#send_to_queue'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,2 +1,7 @@
-<h1>Messages#display</h1>
-<p>Find me in app/views/messages/display.html.erb</p>
+<%= form_tag '/messages/display', method: :post do %>
+
+    <%=label_tag 'message' %>
+    <%=text_field_tag 'message'%>
+
+    <div><%= submit_tag 'Send to queue' %></div>
+<% end -%>
