@@ -15,4 +15,9 @@ class RabbitInstance
   def queue
     @q
   end
+
+  def send_message(message)
+    self.channel.default_exchange.publish(message, routing_key: "hello")
+    puts "Sent #{message} to queue 'hello'"
+  end
 end
